@@ -1,0 +1,71 @@
+﻿<Window
+    x:Class="StokTakip.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StokTakip"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <NavigationView Name="NavView" ItemInvoked="NavView_ItemInvoked" Loaded="NavView_Loaded" AlwaysShowHeader="False" IsBackEnabled="False" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" IsPaneToggleButtonVisible="False">
+            <NavigationView.MenuItems>
+                <NavigationViewItem
+                    Name="test5"
+                    Content="Ana Sayfa"
+                    Icon="Home"
+                    Tag="home" 
+                    IsEnabled="True"/>
+                <NavigationViewItemSeparator />
+                
+                <NavigationViewItemHeader x:Name="MainPagesHeader" Content="Fonksiyonlar" />
+
+                <NavigationViewItem Name="test" Content="Ürünleri Listele" Tag="list" IsEnabled="True">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEA37;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Name="test2" Content="Ürün Ekle" Tag="add" IsEnabled="True">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE948;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Name="test4" Content="Durum Raporu" Tag="report" IsEnabled="True">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE9F9;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Name="test9" Content="İşlem Geçmişi" Tag="details" IsEnabled="True">
+                <NavigationViewItem.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE9F9;" />
+                </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Name="test8" Content="Şifre Değiştir" Tag="changepswd" IsEnabled="True"  >
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Name="test7" Content="Çıkış Yap" Tag="cikis" IsEnabled="True"  >
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem Name="CurrencyPageButton" Content="Dolar = TL?" Icon="Find" Tag="currency" IsEnabled="True"/>
+                <NavigationViewItem Name="test3" Content="Random Ürün Ekle" Icon="ViewAll" Tag="addbulk" IsEnabled="True"/>
+                <NavigationViewItem Content="Hakkında" Icon="Important" Tag="about"/>
+            </NavigationView.FooterMenuItems>
+            <ScrollViewer>
+                <Frame
+                    Name="ContentFrame"
+                    Padding="2"
+                    IsTabStop="True"
+                    NavigationFailed="ContentFrame_NavigationFailed" />
+            </ScrollViewer>
+        </NavigationView>
+    </Grid>
+</Window>

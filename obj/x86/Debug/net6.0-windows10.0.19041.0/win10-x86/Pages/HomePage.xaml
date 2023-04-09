@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="StokTakip.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StokTakip.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          VerticalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Anasayfa" FontSize="36" Margin="4" TextAlignment="Center"/>
+            <Border x:ConnectionId='2' x:Name="WelcomeMessage" Background="#008b00"
+               Margin="0,20" Height="100" >
+                <TextBlock x:ConnectionId='5' x:Name="PassportStatusText" Text="Stok Takip Uygulamasına Hoşgeldiniz.&#x0a;Bu uygulama ile stok yönetimi yapabilirsiniz."
+             Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            </Border>
+
+            <TextBlock Text="Duyurular:" FontSize="18" Margin="10" TextAlignment="Left"/>
+            <Border x:ConnectionId='3' x:Name="AnnouncementsBorder" Background="#0590a4"
+               Margin="0,20" Height="100" >
+                <TextBlock x:ConnectionId='4' x:Name="AnnouncementsText" Text="-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin id magna vitae consectetur. Curabitur aliquet lectus a &#x0a;pharetra aliquet. Nunc ut tempor leo, eu.&#x0a;&#x0a;-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor tellus, congue ac egestas eget, mollis eu nisl. Maecenas&#x0a; vestibulum massa pellentesque, accumsan nunc eget."
+             Margin="4" TextAlignment="Left" VerticalAlignment="Center" FontSize="13"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
+

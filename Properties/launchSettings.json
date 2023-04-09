@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "StokTakip (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "StokTakip (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="StokTakip.Pages.AddBulk"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StokTakip.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          VerticalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Random Ürün Ekleme" FontSize="36" Margin="30" TextAlignment="Center"/>
+            <TextBlock Text="Ürün Adeti:" Margin="0,0,245,0"
+               TextWrapping="Wrap" Width="100"
+               TextAlignment="Left" VerticalAlignment="Center"  FontSize="16"/>
+            <NumberBox Value="10"
+    SmallChange="1"
+    LargeChange="1"
+    Width="250"
+    Minimum="1"
+    SpinButtonPlacementMode="Inline"
+                       Margin="100 -26 0 0"/>
+            <Button x:ConnectionId='2' x:Name="UrunEkleButon" Content="Ekle" Background="#0590a4" Foreground="White"
+                              Width="350" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+            <Border x:ConnectionId='3' x:Name="PasswordInfo" Background="#cd8500"
+               Margin="0,20" Height="100" >
+                <TextBlock x:ConnectionId='4' x:Name="PasswordInfoText" Text="Bu sayfadan random ürün adı ve stok bilgisine sahip &#x0a;istediğiniz sayıda sisteme ürün ekletebilirsiniz."
+             Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
+

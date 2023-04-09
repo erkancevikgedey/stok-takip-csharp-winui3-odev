@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="StokTakip.Pages.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StokTakip.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Border x:Name="AnnouncementsBorder" Background="#0590a4"
+               Margin="0,20" Height="100" >
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Text="Versiyon: v1.0&#x0a;&#x0a;2012721018 Ömer SOYDİNÇ - 2012721029 Erkan ÇEVİKGEDEY" />
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="StokTakip.Pages.CurrencyPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StokTakip.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          VerticalAlignment="Center">
+        
+        <StackPanel Orientation="Vertical">
+            <InfoBar x:ConnectionId='2'
+                    Name ="SuccessMessageBar"
+                    Title="Başarı Mesajı"
+                    IsClosable="True"
+                    IsIconVisible="True"
+                    HorizontalAlignment="Center"
+                    Width="750"
+                    Margin="0 -40 0 0"
+                    IsOpen="True"
+                    Visibility="Collapsed"
+                    Grid.Row="3"
+                    Message="İşlem başarıyla gerçekleştirildi."
+                    Severity="Success" />
+            <InfoBar x:ConnectionId='3'
+                    Name ="ErrorMessageBar"
+                    Title="Hata Mesajı"
+                    IsClosable="True"
+                    IsIconVisible="True"
+                    HorizontalAlignment="Center"
+                    Width="750"
+                    Margin="0 -40 0 0"
+                    IsOpen="True"
+                    Visibility="Collapsed"
+                    Grid.Row="3"
+                    Message="Sözleşmeyi kabul etmediniz."
+                    Severity="Error" />
+            <TextBlock Text="Dolar Kaç TL?" FontSize="36" Margin="30" TextAlignment="Center"/>
+            <TextBlock Text="Gün seçiniz:" Margin="0,0,245,0"
+               TextWrapping="Wrap" Width="100"
+               TextAlignment="Left" VerticalAlignment="Center"  FontSize="16"/>
+            <DatePicker x:ConnectionId='4' x:Name="CurDatePicker" HorizontalAlignment="center" Margin="0 10 0 10" Width="350"/>
+            <TextBlock Text="Sözleşme:" Margin="0,0,245,0"
+               TextWrapping="Wrap" Width="100"
+               TextAlignment="Left" VerticalAlignment="Center"  FontSize="16"/>
+            <CheckBox x:ConnectionId='5' x:Name="termsOfCurrency"
+          Content="API kullanmanın şartlarını kabul ediyorum." HorizontalAlignment="center"/>
+            <Button x:ConnectionId='6' x:Name="GetCurrencyButton" Content="Getir" Background="#0590a4" Foreground="White"
+                                         Width="350" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+            <Border x:ConnectionId='7' x:Name="PasswordInfo" Background="#cd8500"
+               Margin="0,20" Height="100" >
+                <TextBlock x:ConnectionId='8' x:Name="PasswordInfoText" Text="Bu sayfadan istediğin güne ait dolar kapanış kurunu getirebilirsiniz.&#x0a;Network bağlantısı gerektirir."
+             Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
+

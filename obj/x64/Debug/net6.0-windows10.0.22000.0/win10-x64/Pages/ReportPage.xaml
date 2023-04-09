@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="StokTakip.Pages.ReportPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StokTakip.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <RichEditBox x:ConnectionId='2' x:Name="richEditBox" Grid.Column="0" Grid.Row="0" Width="750" Height="500" IsReadOnly="true" Header="Kopyalamaya Hazır Ürün Listesi:"/>
+        <Button x:ConnectionId='3' Content="Kopyala" Grid.Column="0" Grid.Row="1"                   HorizontalAlignment="Center"></Button>
+    </Grid>
+</Page>
+

@@ -1,0 +1,49 @@
+﻿<Window
+    x:Class="StokTakip.LoginWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StokTakip"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          VerticalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Giriş Ekranı" FontSize="36" Margin="4" TextAlignment="Center"/>
+            <Border x:ConnectionId='2' x:Name="WelcomeMessage" Background="#008b00"
+               Margin="0,20" Height="100" >
+                <TextBlock x:ConnectionId='9' x:Name="PassportStatusText" Text="Stok Takip Uygulamasına Hoşgeldiniz"
+             Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            </Border>
+            <InfoBar x:ConnectionId='3'
+                    Name ="ErrorMessageBar"
+                    Title="Hata Mesajı"
+                    IsClosable="False"
+                    IsIconVisible="True"
+                    HorizontalAlignment="Center"
+                    Width="750"
+                    Margin="0 0 0 25"
+                    IsOpen="True"
+                    Visibility="Collapsed"
+                    Message="Kullanıcı adınız ya da şifreniz yanlış"
+                    Severity="Error" />
+            <TextBlock Text="Kullanıcı Adınız:" Margin="0,0,200,0"
+               TextWrapping="Wrap" Width="150"
+               TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+            <TextBox x:ConnectionId='4' x:Name="UsernameTextBox" Margin="120 -25 0 15"  Width="230"/>
+            <TextBlock Text="Şifreniz:" Margin="0,0,200,0"
+               TextWrapping="Wrap" Width="150"
+               TextAlignment="Left" VerticalAlignment="Center"  FontSize="16"/>
+            <PasswordBox x:ConnectionId='5' x:Name="PasswordTextBox" Margin="120 -25 0 5" Width="230" />
+            <Button x:ConnectionId='6' x:Name="PassportSignInButton" Content="Giriş" Background="DodgerBlue" Foreground="White"
+                                   Width="350" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+            <Border x:ConnectionId='7' x:Name="PasswordInfo" Background="#cd8500"
+               Margin="0,20" Height="100" >
+                <TextBlock x:ConnectionId='8' x:Name="PasswordInfoText" Text="Varsayılan Kullanıcı Bilgileri &#x0a; Kullanıcı Adı: admin&#x0a; Şifre: admin"
+             Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
+
